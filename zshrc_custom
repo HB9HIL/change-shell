@@ -111,4 +111,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll="ls -alh"
+alias h="hostname"
 # alias brew="arch -arm64 brew"  --> only on apple silicone mac
