@@ -49,7 +49,7 @@ CURRENT_SHELL=$(getent passwd "$USER" | cut -d: -f7)
 echo "Current shell: $CURRENT_SHELL"
 echo "New shell: $NEW_SHELL"
 
-# Confirm with the user before changing the shell
+# Change the shell
 chsh -s "$NEW_SHELL"
 
 # If zsh is selected, copy the custom .zshrc from the repository
