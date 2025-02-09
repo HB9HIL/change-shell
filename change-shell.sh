@@ -49,6 +49,9 @@ CURRENT_SHELL=$(getent passwd "$USER" | cut -d: -f7)
 echo "Current shell: $CURRENT_SHELL"
 echo "New shell: $NEW_SHELL"
 
+# Install oh my zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # Change the shell
 chsh -s "$NEW_SHELL"
 
