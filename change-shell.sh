@@ -50,20 +50,7 @@ echo "Current shell: $CURRENT_SHELL"
 echo "New shell: $NEW_SHELL"
 
 # Confirm with the user before changing the shell
-read -p "Do you really want to change your shell to $NEW_SHELL? (y/n): " CONFIRM
-
-if [[ "$CONFIRM" =~ ^[Yy]$ ]]; then
-    chsh -s "$NEW_SHELL"
-    if [ $? -eq 0 ]; then
-        echo "Shell successfully changed to $NEW_SHELL. Please log out and back in."
-    else
-        echo "Error: Failed to change the shell."
-        exit 1
-    fi
-else
-    echo "Operation cancelled. Your shell was not changed."
-    exit 0
-fi
+chsh -s "$NEW_SHELL"
 
 # If zsh is selected, copy the custom .zshrc from the repository
 if [ "$NEW_SHELL" == "/bin/zsh" ] || [ "$NEW_SHELL" == "/usr/bin/zsh" ]; then
